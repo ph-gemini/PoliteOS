@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PoliteOS - Arch-based Linux with Hyprland</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .download-page {
+            padding: 50px 0;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .version-info {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            border: 1px solid #333;
+        }
+        
+        .version-info h2 {
+            color: #bb86fc;
+            margin-bottom: 0.5rem;
+        }
+        
+        .version-info .date {
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        
+        .version-info .release-notes {
+            color: #ccc;
+            line-height: 1.8;
+        }
+        
+        .version-info .release-notes ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .checksums {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            border: 1px solid #333;
+        }
+        
+        .checksums h3 {
+            color: #bb86fc;
+            margin-bottom: 1rem;
+        }
+        
+        .checksums pre {
+            background: #0a0a0a;
+            padding: 1rem;
+            border-radius: 5px;
+            color: #bb86fc;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #333;
+        }
+        
+        .download-instructions {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            border: 1px solid #333;
+        }
+        
+        .download-instructions h3 {
+            color: #bb86fc;
+            margin-bottom: 1rem;
+        }
+        
+        .download-instructions ol {
+            margin-left: 2rem;
+            color: #ccc;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PoliteOS</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/docs">Documentation</a></li>
+                <li><a href="/screenshots">Screenshots</a></li>
+                <li><a href="/community">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="download-page">
+        <div class="container">
+            <h1 style="margin-bottom: 2rem;">Download PoliteOS</h1>
+            
+            <div class="version-info">
+                <h2>PoliteOS v1.0 "First Release"</h2>
+                <p class="date">Released: March 2024</p>
+                <div class="release-notes">
+                    <p><strong>Release Notes:</strong></p>
+                    <ul>
+                        <li>Arch Linux base (rolling release)</li>
+                        <li>Hyprland Wayland compositor pre-configured</li>
+                        <li>Linux Zen kernel 6.7+</li>
+                        <li>Pre-installed: foot terminal, waybar, rofi, swaylock</li>
+                        <li>Custom dotfiles for Hyprland</li>
+                        <li>Calamares installer included</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="download-options" style="justify-content: flex-start;">
+                <div class="download-card">
+                    <h3>PoliteOS v1.0 - x86_64</h3>
+                    <p class="size">Size: 2.1 GB</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">SHA256: 2a3b5c8e9f1d4a6b7c8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c</p>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Download ISO</a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>Torrent</h3>
+                    <p class="size">Size: 2.1 GB</p>
+                    <p style="color: #ccc; margin-bottom: 1rem;">P2P download option</p>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Download .torrent</a>
+                </div>
+            </div>
+            
+            <div class="checksums">
+                <h3>SHA256 Checksums</h3>
+                <pre>
+# PoliteOS v1.0 (2024-03)
+2a3b5c8e9f1d4a6b7c8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c  politeos-v1.0-x86_64.iso
+                </pre>
+                <p style="color: #ccc; margin-top: 1rem;">Verify your download with: <code style="background: #0a0a0a; padding: 0.2rem 0.5rem; border-radius: 3px;">sha256sum -c sha256sums.txt</code></p>
+            </div>
+            
+            <div class="download-instructions">
+                <h3>Installation Instructions</h3>
+                <ol>
+                    <li>Download the ISO file</li>
+                    <li>Verify the SHA256 checksum</li>
+                    <li>Create bootable USB: <code>dd if=politeos-v1.0-x86_64.iso of=/dev/sdX bs=4M status=progress</code></li>
+                    <li>Boot from USB and follow Calamares installer</li>
+                    <li>First boot will start Hyprland automatically</li>
+                </ol>
+                <p style="color: #ccc; margin-top: 1rem;">For detailed installation guide, visit <a href="/docs" style="color: #bb86fc;">Documentation</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PoliteOS. Open source software. Released under GPL-3.0.</p>
+        </div>
+    </footer>
+</body>
+</html>
